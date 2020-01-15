@@ -1,0 +1,32 @@
+.contenedor {margin: 0 auto; width: auto; text-align: center;}
+
+.ranking {
+    height: 46px;
+    padding: 0 10px;
+    display: inline-block;
+}
+.ranking:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.ranking:not(:checked) > label {
+    float: right;
+    width:1.3em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+
+.ranking:not(:checked) > label:before {
+    font-family: "Font Awesome 5 Free"; content: "\f005"; font-weight: 900;
+
+}
+.ranking > input:checked ~ label {
+    color: brown;    
+}
+.ranking:not(:checked) > label:hover,
+.ranking:not(:checked) > label:hover ~ label {
+    color: green;  
+}
